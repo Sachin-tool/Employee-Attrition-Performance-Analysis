@@ -163,6 +163,20 @@ B.Sc. Information Technology Student
 
 GitHub: https://github.com/Sachin-tool
 
+## Dashboard Preview
+
+### 1. HR Overview
+![HR Overview](Screenshots/HR_Overview.png)
+
+### 2. Demographics & Attrition
+![Demographics and Attrition](Screenshots/Demographics_Attrition.png)
+
+### 3. Performance & Retention
+![Performance and Retention](Screenshots/Performance_Retention.png)
+
+### 4. Employee Details & Workforce Insights
+![Employee Details](Screenshots/Employee_Details.png)
+
 ---
 
 *This project was developed for academic and learning purposes as part of an Employee Attrition and Performance Analysis industry project.*
