@@ -1,81 +1,151 @@
 # Employee Attrition and Performance Analysis
 
-An interactive HR Analytics dashboard developed using **Microsoft Power BI** to analyse employee attrition, workforce demographics, job satisfaction, employee performance, and retention patterns.
+### TCS iON Industry Project | Microsoft Power BI
+
+An interactive, multi-page HR analytics dashboard developed using Microsoft Power BI to analyse employee attrition, workforce demographics, employee performance, job satisfaction, and retention-related patterns.
+
+---
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Project Objectives](#project-objectives)
+3. [Dataset Information](#dataset-information)
+4. [Tools and Technologies](#tools-and-technologies)
+5. [Dashboard Overview](#dashboard-overview)
+6. [Interactive Features](#interactive-dashboard-features)
+7. [Key Analytical Findings](#key-analytical-findings)
+8. [DAX Measures](#dax-measures)
+9. [Testing and Validation](#testing-and-validation)
+10. [Project Structure](#project-structure)
+11. [Project Demonstration Video](#project-demonstration-video)
+12. [How to Access the Project](#how-to-access-the-project)
+13. [Project Deliverables](#project-deliverables)
+14. [Conclusion](#conclusion)
+15. [Author](#author)
+
+---
 
 ## Project Overview
 
-This project focuses on analysing employee-related data to identify patterns associated with employee attrition, workforce distribution, job satisfaction, and performance.
+Employee attrition is an important challenge for organizations because employee turnover can affect workforce stability, productivity, recruitment costs, and long-term planning.
 
-The project uses Microsoft Power BI to transform raw HR data into an interactive dashboard with KPI cards, charts, slicers, and department-level employee insights.
+This project focuses on analysing employee attrition and performance indicators using the IBM HR Analytics Employee Attrition & Performance dataset.
 
-**Important:** This project uses the IBM HR Analytics Employee Attrition & Performance sample dataset obtained from Kaggle. It does not contain actual TCS employee records.
+The project transforms raw employee data into an interactive Power BI dashboard that helps explore workforce demographics, identify attrition patterns, examine job-related factors, and understand employee performance indicators.
+
+| Project Detail | Information |
+|---|---|
+| Project Title | Employee Attrition and Performance Analysis |
+| Project Provider | TCS iON |
+| Project Type | Industry Project |
+| Technology | Microsoft Power BI |
+| Dataset | IBM HR Analytics Employee Attrition & Performance |
+| Data Analysis | Power Query and DAX |
+| Visualization | Interactive Power BI Dashboard |
+
+---
 
 ## Project Objectives
 
-- Analyse overall employee attrition patterns.
-- Understand workforce demographics.
-- Evaluate job satisfaction and performance.
-- Examine the relationship between overtime and attrition.
-- Analyse department-wise employee distribution.
-- Identify workforce trends through interactive dashboards.
-- Present employee insights using Power BI visualisations.
+- Analyse overall employee attrition and workforce distribution.
+- Examine employee demographics such as age, gender, department, and marital status.
+- Identify attrition patterns across departments, job roles, and education fields.
+- Analyse job satisfaction, job involvement, and performance ratings.
+- Explore the relationship between monthly income and performance rating.
+- Develop an interactive dashboard to support HR-related data exploration.
+- Present meaningful insights through KPIs and visualizations.
+
+---
 
 ## Dataset Information
 
-| Attribute | Details |
-|---|---|
-| Dataset | IBM HR Analytics Employee Attrition & Performance |
-| Source | Kaggle |
-| Records | 1,470 |
-| Columns | 35 |
-| Format | CSV |
-| Data Type | Sample HR analytics data |
+The project uses the **IBM HR Analytics Employee Attrition & Performance** dataset.
 
-The dataset includes employee age, gender, department, job role, monthly income, overtime, job satisfaction, performance rating, years at company, and attrition status.
+| Dataset Detail | Information |
+|---|---:|
+| Total Records | 1,470 |
+| Total Columns | 35 |
+| Attrition - Yes | 237 |
+| Attrition - No | 1,233 |
+| Average Age | 36.92 |
+| Average Monthly Income | 6,502.93 Dataset Units |
+| Data Format | CSV |
+| Data Source | Kaggle |
 
-**Dataset Source:** [IBM HR Analytics Employee Attrition & Performance – Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+### Data Preparation
+
+The dataset was reviewed and prepared before dashboard development.
+
+Key activities included:
+
+- Data inspection and validation.
+- Checking missing values and duplicate records.
+- Reviewing categorical and numerical columns.
+- Validating Attrition column values.
+- Preparing fields for analysis and visualization.
+- Creating calculated measures using DAX.
+
+**Dataset Disclaimer:** This project uses the publicly available IBM HR Analytics sample dataset. It does not contain actual TCS employee records or confidential organizational data. Monthly income values are presented in the original dataset units; no currency denomination is assumed.
+
+**Dataset Source:** [IBM HR Analytics Employee Attrition & Performance Dataset - Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+
+---
 
 ## Tools and Technologies
 
-- Microsoft Power BI Desktop
-- Power Query
-- DAX (Data Analysis Expressions)
-- Microsoft Excel
-- CSV Dataset
-- GitHub
+| Tool / Technology | Purpose |
+|---|---|
+| Microsoft Power BI | Dashboard development and data visualization |
+| Power Query | Data cleaning and transformation |
+| DAX | Calculated measures and KPIs |
+| Microsoft Excel | Data inspection and validation |
+| CSV | Dataset storage |
+| GitHub | Project version control and documentation |
+| Google Drive | Hosting the project demonstration video |
 
-## Dashboard Pages
+---
 
-### 1. HR Overview
+## Dashboard Overview
 
-Provides a high-level summary of workforce size, employee attrition, and income distribution.
+The project contains four interactive dashboard pages.
 
-**KPI Cards:**
+### 1. HR Overview Dashboard
+
+Provides a high-level summary of the employee workforce and attrition situation.
+
+**Key Performance Indicators:**
 - Total Employees
 - Active Employees
 - Attrition Count
 - Attrition Rate
 - Average Monthly Income
 
-**Visualisations:**
+**Visualizations:**
 - Attrition by Department
 - Attrition by Gender
-- Attrition Rate by Overtime
+- Attrition by Overtime
 - Attrition by Age Group
 - Average Monthly Income by Department
 
-### 2. Demographics & Attrition
+**Dashboard Preview:**
 
-Analyses employee distribution and attrition patterns across demographic and organisational categories.
+![HR Overview Dashboard](Screenshots/HR_Overview.png)
 
-**KPI Cards:**
+---
+
+### 2. Demographics and Attrition Dashboard
+
+Focuses on employee demographics and attrition patterns across different workforce categories.
+
+**Key Performance Indicators:**
 - Total Employees
 - Average Age
 - Male Employees
 - Female Employees
 - Average Tenure
 
-**Visualisations:**
+**Visualizations:**
 - Employee Distribution by Age Group
 - Employee Distribution by Department
 - Employee Distribution by Gender
@@ -83,72 +153,140 @@ Analyses employee distribution and attrition patterns across demographic and org
 - Attrition Rate by Education Field
 - Attrition Rate by Job Role
 
-### 3. Performance & Retention
+**Dashboard Preview:**
 
-Explores employee performance, satisfaction, involvement, overtime, and retention patterns.
+![Demographics and Attrition Dashboard](Screenshots/Demographics_Attrition.png)
 
-**KPI Cards:**
+---
+
+### 3. Performance and Retention Dashboard
+
+Examines employee performance indicators and job-related factors associated with attrition.
+
+**Key Performance Indicators:**
 - Average Job Satisfaction
 - Average Performance Rating
 - Average Job Involvement
 - Average Tenure
 - Overtime Percentage
 
-**Visualisations:**
+**Visualizations:**
 - Employee Distribution by Performance Rating
 - Attrition Rate by Job Involvement
 - Attrition Rate by Job Satisfaction
 - Attrition Rate by Years at Company
-- Monthly Income vs Performance Rating
+- Monthly Income vs Performance Rating (Scatter Chart)
 
-### 4. Employee Details & Workforce Insights
+**Dashboard Preview:**
 
-Provides detailed employee-level information through department-based drill-through functionality.
+![Performance and Retention Dashboard](Screenshots/Performance_Retention.png)
 
-**Features:**
-- Department-wise employee records
-- Employee identification and demographic details
-- Monthly income and tenure details
-- Job satisfaction and performance information
-- Attrition status
-- Department-based drill-through
-- Back navigation to the previous report page
+---
 
-## Key Dataset Observations
+### 4. Employee Details and Workforce Insights Dashboard
 
-- Total employees: 1,470
-- Employees with attrition: 237
-- Active employees: 1,233
-- Overall attrition rate: 16.12%
-- Average monthly income: 6,502.93 (Dataset Units)
-- Average employee age: 36.92 years
+Provides an employee-level view through a department-based drill-through feature.
 
-These figures describe the IBM HR Analytics sample dataset, not TCS's workforce. The source data does not establish INR as the currency denomination of the MonthlyIncome field.
+**Employee Details Include:**
+- Employee Number
+- Age
+- Gender
+- Department
+- Job Role
+- Monthly Income
+- Overtime
+- Job Satisfaction
+- Performance Rating
+- Years at Company
+- Attrition Status
 
-## Interactive Features
+Users can navigate from department-level analysis to detailed employee records using the drill-through functionality.
 
-- Department, Gender, Overtime, and Age Group slicers
-- Synchronized slicers across the main dashboard pages
-- Interactive chart filtering
-- Department-wise drill-through
-- Employee-level detail table
-- Navigation between dashboard pages
-- Drill-through back navigation
+**Dashboard Preview:**
 
-## Testing Results
+![Employee Details and Workforce Insights Dashboard](Screenshots/Employee_Details.png)
 
-The dashboard was manually tested using 20 test cases.
+---
 
-| Testing Metric | Result |
+## Interactive Dashboard Features
+
+- **Synchronized Slicers:** Department, Gender, Overtime, and Age Group filters are synchronized across the first three dashboard pages.
+- **Cross-Filtering:** Selecting chart elements updates related visualizations.
+- **Drill-Through:** Navigate from department-level analysis to detailed employee records.
+- **Page Navigation:** Move between dashboard pages using navigation controls.
+- **KPI Cards:** Display important workforce metrics.
+- **Scatter Analysis:** Explore monthly income against performance ratings.
+- **Interactive Visualizations:** Explore employee data through charts, filters, and visual interactions.
+
+---
+
+## Key Analytical Findings
+
+The analysis of the sample dataset highlights the following observations:
+
+- The dataset contains 1,470 employee records.
+- A total of 237 employees have an Attrition status of Yes.
+- The overall attrition rate is approximately 16.12%.
+- The Research & Development department contains 961 employees.
+- The Sales department contains 446 employees.
+- The Human Resources department contains 63 employees.
+- Average monthly income is approximately 6,502.93 dataset units.
+
+These observations describe the sample dataset and should not be interpreted as findings about TCS or any other actual organization.
+
+---
+
+## DAX Measures
+
+DAX measures were created to calculate important workforce metrics and analytical indicators.
+
+Examples include:
+
+- Total Employees
+- Active Employees
+- Attrition Count
+- Attrition Rate
+- Average Monthly Income
+- Average Age
+- Average Tenure
+- Average Job Satisfaction
+- Average Performance Rating
+- Average Job Involvement
+- Overtime Percentage
+
+These measures are used in KPI cards and visualizations throughout the dashboard.
+
+---
+
+## Testing and Validation
+
+The completed Power BI dashboard was tested to verify its functionality and analytical outputs.
+
+### Testing Summary
+
+| Testing Detail | Result |
 |---|---:|
 | Total Test Cases | 20 |
-| Passed | 20 |
-| Failed | 0 |
+| Passed Test Cases | 20 |
+| Failed Test Cases | 0 |
 | Defects Reported | 0 |
+| Overall Status | Passed |
 
-Testing covered page navigation, slicers, KPI calculations, chart interactions, department drill-through, employee records, and save/reopen functionality.
+Testing covered:
 
-The detailed Unit Test Results and Defect Log are available in the repository.
+- Dashboard page navigation.
+- KPI calculations and displayed values.
+- Department-wise employee counts.
+- Slicer functionality.
+- Synchronized slicers.
+- Chart interactions.
+- Drill-through functionality.
+- Employee-level details.
+- Dashboard reopening and validation.
+
+The unit test results and defect log are included in the project deliverables.
+
+---
 
 ## Project Structure
 
@@ -156,85 +294,97 @@ The detailed Unit Test Results and Defect Log are available in the repository.
 Employee-Attrition-Performance-Analysis/
 │
 ├── README.md
+│
 ├── Dashboard/
 │   └── TCS_Employee_Attrition_Performance_Analysis.pbix
+│
 ├── Dataset/
 │   └── Employee_Attrition_Dataset.csv
+│
 ├── Documentation/
-│   ├── Project_Report.pdf
-│   └── Project_Report.docx
+│   ├── TCS_Employee_Attrition_Performance_Analysis_Project_Report.pdf
+│   └── TCS_Employee_Attrition_Performance_Analysis_Project_Report.docx
+│
 ├── Testing/
-│   └── Unit_Test_Results.xlsx
+│   └── TCS_Employee_Attrition_Unit_Test_Results_and_Defect_Log.xlsx
+│
 ├── Screenshots/
 │   ├── HR_Overview.png
 │   ├── Demographics_Attrition.png
 │   ├── Performance_Retention.png
 │   └── Employee_Details.png
+│
 └── Video/
-    └── Dashboard_Demonstration.mp4
+    └── Demonstration video hosted on Google Drive
 ```
 
-## How to Use
+---
 
-1. Download the Power BI `.pbix` file from the Dashboard folder.
-2. Download the source CSV file from the Dataset folder.
-3. Install Microsoft Power BI Desktop.
-4. Open the `.pbix` file.
-5. If Power BI requests the source CSV location, update the data source path.
-6. Refresh the data if required.
-7. Explore the dashboard using its slicers, charts, and drill-through features.
+## Project Demonstration Video
+
+The complete project demonstration is available on Google Drive.
+
+The video demonstrates:
+
+- Introduction to the project.
+- HR Overview dashboard.
+- Demographics and Attrition analysis.
+- Performance and Retention analysis.
+- Interactive slicers and dashboard navigation.
+- Department-based drill-through.
+- Employee-level details and insights.
+
+**[▶ Watch the Complete Project Demonstration Video](https://drive.google.com/file/d/1xhqzjxwYLQCCptfglFZWeIVbqibtmBDB/view?usp=sharing)**
+
+*Video access is available to anyone with the link.*
+
+---
+
+## How to Access the Project
+
+1. Clone or download this GitHub repository.
+2. Open the `Dashboard` folder.
+3. Download `TCS_Employee_Attrition_Performance_Analysis.pbix`.
+4. Open the PBIX file using Microsoft Power BI Desktop.
+5. Interact with the dashboard using slicers, charts, navigation, and drill-through features.
+
+**Note:** Microsoft Power BI Desktop is required to open and interact with the PBIX file.
+
+---
 
 ## Project Deliverables
 
-- Interactive Power BI Dashboard
-- Project Report (PDF)
-- Editable Project Report (Word)
-- Unit Test Results and Defect Log
-- Source Dataset
-- Dashboard Screenshots
-- Application Execution Video
-- Five-page Project Summary PDF
+The project includes the following deliverables:
 
-## Documentation
+1. Power BI Dashboard (.pbix)
+2. Project Report (PDF and DOCX)
+3. Unit Test Results and Defect Log (Excel)
+4. Dataset (CSV)
+5. Dashboard Screenshots
+6. Project Demonstration Video (Google Drive)
 
-- [Project Report (PDF)](Documentation/Project_Report.pdf)
-- [Project Report (Word)](Documentation/Project_Report.docx)
-- [Unit Test Results and Defect Log](Testing/Unit_Test_Results.xlsx)
+---
 
-## Dashboard Preview
+## Conclusion
 
-### 1. HR Overview
+This project demonstrates the application of data analytics and business intelligence techniques to employee attrition and performance analysis.
 
-![HR Overview Dashboard](Screenshots/HR_Overview.png)
+By combining data preparation, DAX calculations, interactive visualizations, synchronized slicers, and drill-through functionality, the dashboard provides a structured way to explore workforce patterns and employee-related indicators.
 
-### 2. Demographics & Attrition
+The project also provides practical experience in data cleaning, analytical thinking, dashboard development, testing, and presenting data-driven findings.
 
-![Demographics and Attrition Dashboard](Screenshots/Demographics_Attrition.png)
-
-### 3. Performance & Retention
-
-![Performance and Retention Dashboard](Screenshots/Performance_Retention.png)
-
-### 4. Employee Details & Workforce Insights
-
-![Employee Details Dashboard](Screenshots/Employee_Details.png)
-
-## Application Execution Video
-
-The dashboard demonstration video will be available here:
-
-[Dashboard Demonstration Video](Video/Dashboard_Demonstration.mp4)
+---
 
 ## Author
 
-**Sachin Singh**
+**Sachin Jitendra Singh**
 
-B.Sc. Information Technology Student
+Bachelor of Science in Information Technology (B.Sc. IT)  
 
-GitHub: [Sachin-tool](https://github.com/Sachin-tool)
+**GitHub Repository:** [Employee Attrition and Performance Analysis](https://github.com/Sachin-tool/Employee-Attrition-Performance-Analysis)
 
-## Project Information
+**Project Provider:** TCS iON
 
-This project was developed as part of the TCS iON Industry Project titled **Employee Attrition and Performance Analysis**.
+---
 
-The project is intended for academic and learning purposes. All findings and recommendations are based on the supplied IBM HR Analytics sample dataset and should not be interpreted as actual TCS workforce insights.
+*This project was developed for academic and learning purposes using a publicly available sample HR analytics dataset.*
